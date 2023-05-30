@@ -9,11 +9,9 @@ from bidict import bidict
 import hummingbot.connector.exchange.bitget.bitget_constants as CONSTANTS
 from hummingbot.client.config.client_config_map import ClientConfigMap
 from hummingbot.client.config.config_helpers import ClientConfigAdapter
+from hummingbot.connector.exchange.bitget.bitget_api_user_stream_data_source import BitgetApiUserStreamDataSource
 from hummingbot.connector.exchange.bitget.bitget_auth import BitgetAuth
 from hummingbot.connector.exchange.bitget.bitget_exchange import BitgetExchange
-from hummingbot.connector.exchange.bitget.bitget_api_user_stream_data_source import (
-    BitgetApiUserStreamDataSource,
-)
 from hummingbot.connector.test_support.network_mocking_assistant import NetworkMockingAssistant
 from hummingbot.connector.time_synchronizer import TimeSynchronizer
 

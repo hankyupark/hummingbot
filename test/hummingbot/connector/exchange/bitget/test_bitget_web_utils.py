@@ -5,10 +5,7 @@ from typing import Awaitable
 
 from aioresponses import aioresponses
 
-from hummingbot.connector.exchange.bitget import (
-    bitget_constants as CONSTANTS,
-    bitget_web_utils as web_utils,
-)
+from hummingbot.connector.exchange.bitget import bitget_constants as CONSTANTS, bitget_web_utils as web_utils
 
 
 class BitgetWebUtilsTest(unittest.TestCase):

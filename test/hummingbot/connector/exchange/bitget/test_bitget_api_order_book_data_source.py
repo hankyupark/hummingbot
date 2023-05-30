@@ -13,9 +13,7 @@ import hummingbot.connector.exchange.bitget.bitget_web_utils as web_utils
 from hummingbot.client.config.client_config_map import ClientConfigMap
 from hummingbot.client.config.config_helpers import ClientConfigAdapter
 from hummingbot.connector.exchange.bitget import bitget_constants as CONSTANTS
-from hummingbot.connector.exchange.bitget.bitget_api_order_book_data_source import (
-    BitgetAPIOrderBookDataSource,
-)
+from hummingbot.connector.exchange.bitget.bitget_api_order_book_data_source import BitgetAPIOrderBookDataSource
 from hummingbot.connector.exchange.bitget.bitget_exchange import BitgetExchange
 from hummingbot.connector.test_support.network_mocking_assistant import NetworkMockingAssistant
 from hummingbot.core.data_type.order_book_message import OrderBookMessage, OrderBookMessageType
