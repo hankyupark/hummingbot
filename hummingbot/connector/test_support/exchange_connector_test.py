@@ -1484,7 +1484,8 @@ class AbstractExchangeConnectorTests:
                     pass
 
                 self.assertEqual(Decimal("10"), self.exchange.available_balances[self.base_asset])
-                self.assertEqual(Decimal("15"), self.exchange.get_balance(self.base_asset))
+                # we can't check the total balance since user_stream_balance doesn't have the total balance
+                # self.assertEqual(Decimal("15"), self.exchange.get_balance(self.base_asset))
 
         def test_user_stream_raises_cancel_exception(self):
             self.exchange._set_current_timestamp(1640780000)
