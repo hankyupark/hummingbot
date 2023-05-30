@@ -338,15 +338,12 @@ class BitgetExchange(ExchangePyBase):
     async def _request_order_status(self, tracked_order: InFlightOrder) -> OrderUpdate:
         try:
             order_status_data = await self._request_order_status_data(tracked_order=tracked_order)
-            
-            self.logger.info(f"[bitget_exchange] _request_order_status. order_status_data: {repr(order_status_data)}")
-            
-            order_msg = order_status_data["data"]
+            order_msg = order_status_data["data"][0]
             client_order_id = str(order_msg["clientOrderId"])
             order_update: OrderUpdate = OrderUpdate(
                 trading_pair=tracked_order.trading_pair,
                 update_timestamp=self.current_timestamp,
-                new_state=CONSTANTS.ORDER_STATE[order_msg["state"]],
+                new_state=CONSTANTS.ORDER_STATE[order_msg["status"]],
                 client_order_id=client_order_id,
                 exchange_order_id=order_msg["orderId"],
             )
